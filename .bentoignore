@@ -1,0 +1,13 @@
+stroke/
+stroke
+data
+data/
+__pycache__
+__pycache__/
+.env
+README.md
+requirements.txt
+.gitignore
+.env
+notebooks/
+notebooks
