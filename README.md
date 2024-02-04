@@ -54,7 +54,7 @@ Zenml provides easy to use MLOPS framework to manage your End to End ML model. I
 
 - Zenml offers user friendly dashboard locally to manage pipelines and components.
 
-![Zenml Dashboard](assets/pipelines.PNG)
+![Zenml Dashboard](/assets/pipelines.png)
 
 - It also provides **DAG visualizer** helping us understand the flow and dependencies between steps.
 
