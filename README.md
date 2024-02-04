@@ -40,14 +40,11 @@ We create a user-friendly web application using Streamlit. Users can input patie
 
 ***
 
-## Requirements 📋
+## Prerequisites 📋
 Before starting, ensure you have the following prerequisites:
-
 - **Python 3.10**
-- Required Python packages: **requirements.txt**
-
-- The "**Stroke Prediction Dataset**" dataset, available [https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset]
-
+- **Wsl terminal**
+---
 
 ## Running the project 🏃‍♂️
 
