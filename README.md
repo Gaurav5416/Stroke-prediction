@@ -9,7 +9,6 @@ Predict whether a person is prone to a heart stroke based on Age, BMI(Body Mass 
 - [ZenML](#Zenml)
 - [MLFlow Experiment Tracking](#Experiment)
 - [Streamlit App](#Streamlit_app)
-- [Using the App](#using-the-app)
 
 ## Introduction 🚩
 
