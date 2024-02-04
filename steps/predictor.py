@@ -7,7 +7,7 @@ from rich import print as rich_print
 from zenml.integrations.mlflow.services import MLFlowDeploymentService
 from zenml.integrations.bentoml.services import BentoMLDeploymentService
 
-@step
+@step(enable_cache=False)
 def mlflow_predictor(
     service : MLFlowDeploymentService,
     data:pd.DataFrame,

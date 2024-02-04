@@ -2,7 +2,7 @@ import logging
 from abc import ABC, abstractmethod
 import numpy as np
 import pandas as pd
-from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.metrics import mean_squared_error, r2_score, f1_score
 
 class Evaluation(ABC):
     """
@@ -69,3 +69,19 @@ class R2(Evaluation):
 
         except Exception as e:
             logging.error(f"Error in calculating R2 : {e}")
+
+
+class F1(Evaluation):
+    """
+    Evaluation Strategy that uses Mean square error
+    """
+
+    def calculate_scores(self, y_true:np.ndarray, y_pred:np.ndarray):
+        try:
+            logging.info("calculating MSE")
+            f1 = f1_score(y_true, y_pred)
+            logging.info(f"F1 : {f1}")
+            return f1
+
+        except Exception as e:
+            logging.error(f"Error in calculating F1 : {e}")

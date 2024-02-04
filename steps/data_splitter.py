@@ -6,7 +6,7 @@ from steps.src.model_building import DataSplitter
 
 logger = get_logger(__name__)
 
-@step(enable_cache=True)
+@step(enable_cache=False)
 def split_data(df:pd.DataFrame)->Tuple[
     Annotated[pd.DataFrame, "X_train"],
     Annotated[pd.DataFrame, "X_test"],

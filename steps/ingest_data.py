@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 from steps.src.data_loader import DataLoader
 
-@step(enable_cache=True)
+@step(enable_cache=False)
 def ingest_data(
     table_name:str,
     for_predict : bool = False,

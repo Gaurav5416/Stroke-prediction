@@ -6,12 +6,12 @@ from typing_extensions import Annotated
 
 from zenml import step
 from sklearn.linear_model import LogisticRegression
-
+from sklearn.tree import DecisionTreeClassifier
 from steps.src.model_evaluation import MSE, RMSE, R2
 
-@step(enable_cache=True)
+@step(enable_cache=False)
 def evaluate_model(
-    model:LogisticRegression, 
+    model:DecisionTreeClassifier, 
     X_test:pd.DataFrame, 
     y_test:pd.Series
     )->Tuple[

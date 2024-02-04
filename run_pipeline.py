@@ -30,7 +30,7 @@ BENTOML = "bentoml"
 
 
 
-def main(config:str, deployer : str):
+def deploy(config:str, deployer : str):
 
     
     deploy = config == DEPLOY or config == DEPLOY_AND_PREDICT
@@ -59,4 +59,4 @@ def main(config:str, deployer : str):
 
 
 if __name__ == "__main__":
-    main()
+    deploy()

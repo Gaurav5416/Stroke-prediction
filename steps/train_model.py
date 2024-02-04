@@ -1,6 +1,6 @@
 from typing import List, Tuple
 from typing_extensions import Annotated
-
+from sklearn.tree import DecisionTreeClassifier
 import mlflow
 import mlflow.sklearn
 import pandas as pd
@@ -24,7 +24,8 @@ def sklearn_train(
     """Trains a logistic regression model and outputs the summary."""
     try:
             mlflow.sklearn.autolog()
-            model = LogisticRegression(max_iter=1000)
+            # model = LogisticRegression()
+            model = DecisionTreeClassifier()
             model.fit(X_train, y_train)
             return model
     except Exception as e:

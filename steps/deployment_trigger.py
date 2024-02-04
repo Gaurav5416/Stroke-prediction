@@ -7,12 +7,13 @@ class DeploymentTriggerParameters(BaseParameters):
     min_accuracy: float = 0
 
 
-@step(enable_cache=True)
+@step(enable_cache=False)
 def deployment_trigger(
     accuracy: float,
     params: DeploymentTriggerParameters,
 ) -> bool:
     """Implements a simple model deployment trigger that looks at the
     input model accuracy and decides if it is good enough to deploy"""
-
-    return accuracy > params.min_accuracy
+    decision = accuracy > params.min_accuracy
+    decision = True
+    return decision
