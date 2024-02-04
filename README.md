@@ -21,7 +21,7 @@ Heart strokes have become common concern for people. This ML model warns a perso
 
 Our project consists of several components:
 
-### Data Collection 📊
+### Data Collection 📁
 We used data of patients who suffered stroke, the data contain various useful information such as BMI(Body Mass Index), Glucose level, Hypertension, heart disease of patients which might be indicators for the health.
 
 ### Data Handling 📊
