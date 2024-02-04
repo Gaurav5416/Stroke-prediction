@@ -69,7 +69,7 @@ Please follow following steps to run the project on your machine locally . . .
     zenml init
     zenml up
     ```
-4. installing zenml integrations
+4. Installing zenml integrations
     ```
     zenml integration install mlflow -y
     ```
