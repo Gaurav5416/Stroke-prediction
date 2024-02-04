@@ -55,23 +55,23 @@ Zenml provides easy to use MLOPS framework to manage your End to End ML model. I
 
 - Zenml offers user friendly dashboard locally to manage pipelines and components.
 
-![Zenml Dashboard](/assets/pipelines.PNG)
+![Zenml Dashboard](assets/pipelines.PNG)
 
 - It also provides **DAG visualizer** helping us understand the flow and dependencies between steps.
 
 **Continuous Deployment Pipeline**
-![Continuous Deployment Pipeline](/assets/full_dag.PNG)
+![Continuous Deployment Pipeline](assets/full_dag.PNG)
 
 **Inference Pipeline**
-![Inference Pipeline](/assets/inference_pipeline.PNG)
+![Inference Pipeline](assets/inference_pipeline.PNG)
 
 
 ## MLFlow Experiment Tracking 🧪
 We used Mlflow experiment tracker to monitor and record key metrics, parameters, and results throughout the machine learning pipeline. Mlflow provides a user friendly Dashboard for managing experiments.
 
-![MLFLow](/assets/mlflow.PNG)
+![MLFLow](assets/mlflow.PNG)
 
 ## Streamlit App ✨
 Here is the user friendly web application developed using Streamlit. It offers an intuitive interface for users to interact with the machine learning model, allowing them to input patient details and receive predictions regarding their risk of stroke.
 
-![Streamlit app](/assets/streamlit_app.PNG)
+![Streamlit app](assets/streamlit_app.PNG)
