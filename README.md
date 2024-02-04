@@ -49,6 +49,51 @@ Before starting, ensure you have the following prerequisites:
 - The "**Stroke Prediction Dataset**" dataset, available [https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset]
 
 
+## Running the project 🏃‍♂️
+
+Please follow following steps to run the project on your machine locally . . . 
+
+1. Clone this repository to your local machine.
+
+    ```
+    git clone https://github.com/Gaurav5416/Stroke-prediction
+    cd Stroke-prediction
+    ```
+
+2. Install necessary requirements.
+    ```
+    pip install -r requirements.txt
+    ```
+3. Wake up zenml
+    ```
+    zenml init
+    zenml up
+    ```
+4. installing zenml integrations
+    ```
+    zenml integration install mlflow -y
+    ```
+
+5. Registering necessary stack components
+    ```
+    zenml experiment-tracker register mlflow_tracker --flavor=mlflow
+    zenml model-deployer register mlflow_deployer --flavor=mlflow
+    zenml stack register local_mlflow_stack -a default -o default -d mlflow_deployer -e mlflow_tracker
+    zenml stack set local_mlflow_stack
+    ```
+6. Deploying the ML Model
+    ```
+    python run_pipeline.py
+    ```
+
+7. Running Streamlit app
+    ```
+    streamlit run streamlit_app.py
+    ```
+
+***
+
+
 ## ZenML
 Zenml provides easy to use MLOPS framework to manage your End to End ML model. It provides various components such as **Experiment trackers** and **Model deployers** which we used in this project. 
 
@@ -56,11 +101,12 @@ Zenml provides easy to use MLOPS framework to manage your End to End ML model. I
 
 ![Zenml Dashboard](/assets/pipelines.png)
 
+---
 ## MLFlow Experiment Tracking 🧪
 We used Mlflow experiment tracker to monitor and record key metrics, parameters, and results throughout the machine learning pipeline. Mlflow provides a user friendly Dashboard for managing experiments.
 
 ![MLFLow](/assets/mlflow.png)
-
+---
 ## Streamlit App ✨
 Here is the user friendly web application developed using Streamlit. It offers an intuitive interface for users to interact with the machine learning model, allowing them to input patient details and receive predictions regarding their risk of stroke.
 
