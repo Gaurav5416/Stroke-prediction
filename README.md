@@ -44,6 +44,8 @@ We create a user-friendly web application using Streamlit. Users can input patie
 Before starting, ensure you have the following prerequisites:
 - **Python 3.10**
 - **Wsl terminal**
+- **Postgresql server**
+- **pgadmin4**
 ---
 
 ## Running the project 🏃‍♂️
@@ -78,12 +80,26 @@ Please follow following steps to run the project on your machine locally . . .
     zenml stack register local_mlflow_stack -a default -o default -d mlflow_deployer -e mlflow_tracker
     zenml stack set local_mlflow_stack
     ```
-6. Deploying the ML Model
+
+6. Create a .env file specifying datapath of table and database path eg..
+    ```
+    DB_URL = "postgresql://postgres:1234@localhost:5432/stroke"
+    datapath = "/mnt/c/name/stoke_system/data/stroke_capped.csv"
+    ```
+
+7. Create SQL table and push CSV data into postgreSQL database using ORM
+    ```
+    cd data/management
+    python index.py
+    python fill_table.py
+    ```
+
+8. Deploying the ML Model
     ```
     python run_pipeline.py
     ```
 
-7. Running Streamlit app
+9. Running Streamlit app
     ```
     streamlit run streamlit_app.py
     ```
