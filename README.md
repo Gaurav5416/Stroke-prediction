@@ -126,14 +126,11 @@ Here is the user friendly web application developed using Streamlit. It offers a
 
 ![Streamlit app](/assets/streamlit_app.png)
 
----
 
 ## Contributing 🤝
-Contributions welcome! Feel free to fork this project and submit pull requests for any additions, improvement or bug fixes.
+We welcome contributions from the community! Whether it's fixing a bug, adding a feature, or improving documentation, your input is valuable. Fork the project, submit pull requests, and collaborate with us to make this project even better
 
----
 
 ## License 📜
-This project is open-source and is licensed under the [MIT License](LICENSE.md). You can find the full license in the [LICENSE.md](LICENSE.md) file. 🚀
+This project is open-source and is licensed under the [MIT License](LICENSE.md). You can find the full license in the [LICENSE.md](LICENSE.md) file. 
 
----
