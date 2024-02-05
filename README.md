@@ -128,7 +128,7 @@ Here is the user friendly web application developed using Streamlit. It offers a
 
 
 ## Contributing 🤝
-We welcome contributions from the community! Whether it's fixing a bug, adding a feature, or improving documentation, your input is valuable. Fork the project, submit pull requests, and collaborate with us to make this project even better
+We welcome contributions from the community! Whether it's fixing a bug or adding a feature, your input is valuable. Fork the project, submit pull requests, and collaborate with us to make this project even better
 
 
 ## License 📜
