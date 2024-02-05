@@ -84,7 +84,7 @@ Please follow following steps to run the project on your machine locally . . .
 
 6. Create a .env file specifying datapath of table and database path eg..
     ```
-    DB_URL = "postgresql://postgres:1234@localhost:5432/stroke"
+    DB_URL = "postgresql://username:password@host:port/database"
     datapath = "/mnt/c/name/stoke_system/data/stroke_capped.csv"
     ```
 
