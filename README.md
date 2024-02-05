@@ -132,5 +132,5 @@ We welcome contributions from the community! Whether it's fixing a bug, adding a
 
 
 ## License 📜
-This project is open-source and is licensed under the [MIT License](LICENSE). You can find the full license in the [LICENSE.md](LICENSE) file. 
+This project is open-source and is licensed under the [MIT License](LICENSE). You can find the full license in the [LICENSE](LICENSE) file. 
 
