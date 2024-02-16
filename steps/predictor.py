@@ -5,7 +5,6 @@ from zenml import step
 from rich import print as rich_print
 
 from zenml.integrations.mlflow.services import MLFlowDeploymentService
-from zenml.integrations.bentoml.services import BentoMLDeploymentService
 
 @step(enable_cache=False)
 def mlflow_predictor(
@@ -25,17 +24,5 @@ def mlflow_predictor(
     data = np.array(json_list)
 
     prediction = service.predict(data)
-    rich_print(prediction)
-    return prediction
-
-@step
-def bentoml_predictor(
-    service : BentoMLDeploymentService,
-    data:pd.DataFrame,
-    )->np.ndarray :
-    
-    service.start(timeout=60)
-    data = data.to_numpy()
-    prediction = service.predict("predict_ndarray", data)
     rich_print(prediction)
     return prediction

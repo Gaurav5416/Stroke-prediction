@@ -8,10 +8,6 @@ import click
 DEPLOY = "deploy"
 PREDICT = "predict"
 DEPLOY_AND_PREDICT = "deploy_and_predict"
- 
-MLFLOW = "mlflow"
-BENTOML = "bentoml"
-
 @click.command()
 @click.option(
     "--config",
@@ -19,18 +15,8 @@ BENTOML = "bentoml"
     default=DEPLOY_AND_PREDICT,
 
 )
-@click.option(
-    "--deployer",
-    type=click.Choice([MLFLOW, BENTOML]),
-    default=MLFLOW,
-    help="Optionally you can choose to deploy"
-    "deploy the model using MLflow(local deployment only), or to "
-    "deploy the model using BentoML, or to ",
-)
 
-
-
-def deploy(config:str, deployer : str):
+def deploy(config:str):
 
     
     deploy = config == DEPLOY or config == DEPLOY_AND_PREDICT
@@ -39,14 +25,9 @@ def deploy(config:str, deployer : str):
     if deploy:
         continuous_deployment_pipeline(deployer = deployer)
     if predict :
-        if deployer == 'mlflow':
-            step_name = "mlflow_model_deployer_step"
-        if deployer == 'bentoml':
-            step_name = "bentoml_model_deployer_step"
         inference_pipeline(
             pipeline_name = "continuous_deployment_pipeline", 
-            step_name = step_name,
-            deployer = deployer)
+            step_name = step_name)
 
     print(
         "Now run \n "
