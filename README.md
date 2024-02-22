@@ -28,7 +28,7 @@ We used data of patients who suffered stroke, the data contain various useful in
 We used ORM (Object relation Mapping) to handle the data. We shifted the data to a Postgresql server and fetched it from the database using ORM. 
 
 ### Exploratory Data Analysis 🔍
-In EDA, we perfomed initial exploration of the data, familiarity with the features, Inspected the nature of the data through visualizations and various other statistical techniques. please visit EDA.ipynb in notebooks folder.
+In EDA, we perfomed initial exploration of the data, familiarity with the features, Inspected the nature of the data through visualizations and various other statistical techniques.
 
 ### Data Preprocessing 🧹
 After initial exploration and identifying features that needed to be dealt with. We moved towards data preprocessing where transformed the features into a format suitable for machine learning. We also handle missing data and encode categorical variables.
